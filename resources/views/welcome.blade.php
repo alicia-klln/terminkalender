@@ -27,18 +27,18 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Anmelden</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrieren</a>
                         @endif
                     @endif
                 </div>
             @endif
-            
+
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                   <h1>Mein Terminkalender</h1>
+                   <h1>Wilkommen zur Anwendung MeinTerminkalender!</h1>
               
                 </div>
 
@@ -46,7 +46,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">
-                                
+                                Du hast bereits ein Profil?
                             </div>
 
                             <div class="ml-12">
@@ -56,7 +56,7 @@
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
-                                
+                                Du bist neu und willst dich registrieren?
                             </div>
 
                             <div class="ml-12">
@@ -66,7 +66,7 @@
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
-                                
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Anmelden</a>
                             </div>
 
                             <div class="ml-12">
@@ -76,7 +76,7 @@
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
-                                
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrieren</a>
                             </div>
 
                             <div class="ml-12">

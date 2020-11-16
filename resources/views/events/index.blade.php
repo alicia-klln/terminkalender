@@ -1,6 +1,13 @@
 @extends('events.layout')
  
 @section('content')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Deine Übersicht') }}
+        </h2>
+    </x-slot>
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -49,5 +56,5 @@
     </table>
   
     {!! $events->links() !!}
-      
+</x-app-layout>
 @endsection
