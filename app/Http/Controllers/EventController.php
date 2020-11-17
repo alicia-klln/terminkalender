@@ -83,6 +83,7 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+            'creater' => 'required',
         ]);
     
         $event->update($request->all());

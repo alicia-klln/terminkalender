@@ -30,6 +30,8 @@
         <tr>
             <th>Event-ID</th>
             <th>Name</th>
+            <th>Ersteller</th>
+            
             <th>Details</th>
             <th width="280px">Action</th>
         </tr>
@@ -37,24 +39,25 @@
         <tr>
             <td>{{ $event->id }}</td>
             <td>{{ $event->name }}</td>
+            <td>{{ $event->creater }}</td>
+            
             <td>{{ $event->detail }}</td>
             <td>
                 <form action="{{ route('events.destroy',$event->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('events.show',$event->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('events.show',$event->id) }}">Ansehen</a>
     
-                    <a class="btn btn-primary" href="{{ route('events.edit',$event->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('events.edit',$event->id) }}">Bearbeiten</a>
    
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Löschen</button>
                 </form>
             </td>
         </tr>
         @endforeach
     </table>
-  
     {!! $events->links() !!}
 </x-app-layout>
 @endsection

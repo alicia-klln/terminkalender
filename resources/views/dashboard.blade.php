@@ -9,6 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <!-- <x-jet-welcome /> -->
+                <h3>Hey {{ Auth::user()->name }}, </h3>
                 <h3><strong>Das ist dein persönlicher Bereich!</strong></h3>
                 Hier findest du eine Liste deiner Termine.
             </div>
