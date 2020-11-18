@@ -1,11 +1,15 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
+        <!-- <x-slot name="logo">
             <x-jet-authentication-card-logo />
-        </x-slot>
-
+        </x-slot> -->
+        <div class="flex items-center justify-center mt-4">    
+            <a href="{{ url('/') }}" class="text-md text-blue-700 underline">MeineTerminübersicht</a>
+        </div>
+        
+        
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+            {{ __('Du hast dein Passwort vergessen? Gib deine E-Mail ein und wir senden dir einen Link zum Zurücksetzen.') }}
         </div>
 
         @if (session('status'))
@@ -20,13 +24,17 @@
             @csrf
 
             <div class="block">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
+                <x-jet-label for="email" value="{{ __('E-Mail') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            
+            <div class="flex items-center justify-start mt-4">    
+                <button><a href="{{ url('/') }}" class="text-sm text-gray-700 ">Zurück zur Startseite</a></button>
+            </div>
+            <div class="flex items-center justify-end mt-4">    
                 <x-jet-button>
-                    {{ __('Email Password Reset Link') }}
+                    {{ __('Link anfordern') }}
                 </x-jet-button>
             </div>
         </form>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="313" height="313" viewBox="0 0 313 313">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="313" height="313"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1 1)" fill="#fff" stroke="#12699b" stroke-width="8">
+      <circle cx="156" cy="156" r="156" stroke="none"/>
+      <circle cx="156" cy="156" r="152" fill="none"/>
+    </g>
+    <g id="Pfad_1" data-name="Pfad 1" transform="translate(48 77)" fill="#fff">
+      <path d="M 176 147 L 19 147 C 14.71875 147 10.69577789306641 145.3567504882813 7.672194480895996 142.3729095458984 C 4.65927791595459 139.3996734619141 3 135.4494781494141 3 131.25 L 3 18.75 C 3 14.55052757263184 4.65927791595459 10.60033321380615 7.672194480895996 7.627083301544189 C 10.69577789306641 4.643249988555908 14.71875 3 19 3 L 176 3 C 180.28125 3 184.3042297363281 4.643249988555908 187.3278045654297 7.627083301544189 C 190.3407287597656 10.60033321380615 192 14.55052757263184 192 18.75 L 192 131.25 C 192 135.4494781494141 190.3407287597656 139.3996734619141 187.3278045654297 142.3729095458984 C 184.3042297363281 145.3567504882813 180.28125 147 176 147 Z" stroke="none"/>
+      <path d="M 19 6 C 11.831787109375 6 6 11.71961975097656 6 18.75 L 6 131.25 C 6 138.2803802490234 11.831787109375 144 19 144 L 176 144 C 183.168212890625 144 189 138.2803802490234 189 131.25 L 189 18.75 C 189 11.71961975097656 183.168212890625 6 176 6 L 19 6 M 19 0 L 176 0 C 186.493408203125 0 195 8.3946533203125 195 18.75 L 195 131.25 C 195 141.6053161621094 186.493408203125 150 176 150 L 19 150 C 8.506591796875 150 0 141.6053161621094 0 131.25 L 0 18.75 C 0 8.3946533203125 8.506591796875 0 19 0 Z" stroke="none"/>
+    </g>
+    <line id="Linie_1" data-name="Linie 1" y2="42" transform="translate(113.5 57.5)" fill="none" stroke="#000" stroke-width="6"/>
+    <line id="Linie_2" data-name="Linie 2" y2="42" transform="translate(181.5 57.5)" fill="none" stroke="#000" stroke-width="6"/>
+    <line id="Linie_3" data-name="Linie 3" x2="193" transform="translate(48.5 115.5)" fill="none" stroke="#000" stroke-width="6"/>
+    <g id="Rechteck_8" data-name="Rechteck 8" transform="translate(199 173)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_7" data-name="Rechteck 7" transform="translate(152 173)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(165 167)" fill="#fff" stroke="#000" stroke-width="6">
+      <circle cx="48" cy="48" r="48" stroke="none"/>
+      <circle cx="48" cy="48" r="45" fill="none"/>
+    </g>
+    <path id="Pfad_2" data-name="Pfad 2" d="M0,0,15,15" transform="translate(189.5 219.5)" fill="none" stroke="#12699b" stroke-width="7"/>
+    <line id="Linie_5" data-name="Linie 5" x1="39" y2="39" transform="translate(200.5 195.5)" fill="none" stroke="#12699b" stroke-width="7"/>
+    <g id="Rechteck_1" data-name="Rechteck 1" transform="translate(59 124)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_5" data-name="Rechteck 5" transform="translate(59 173)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_2" data-name="Rechteck 2" transform="translate(199 124)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_3" data-name="Rechteck 3" transform="translate(152 124)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_4" data-name="Rechteck 4" transform="translate(106 124)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Rechteck_6" data-name="Rechteck 6" transform="translate(106 173)" fill="#fff" stroke="#000" stroke-width="6">
+      <rect width="33" height="33" stroke="none"/>
+      <rect x="3" y="3" width="27" height="27" fill="none"/>
+    </g>
+  </g>
+</svg>

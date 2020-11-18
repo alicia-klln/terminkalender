@@ -1,3 +1,4 @@
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -12,8 +13,21 @@
                 <h3>Hey {{ Auth::user()->name }}, </h3>
                 <h3><strong>Das ist dein persönlicher Bereich!</strong></h3>
                 Hier findest du eine Liste deiner Termine.
+                <div class="sm-6">
+                    <a href="{{ route('events.index') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Deine Termine') }}
+                    </a>
+                </div>
+                <div class="sm-6">
+                    <a href="{{ route('events.create') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Neuer Termin') }}
+                    </a>
+                </div>
+                
+                
+
+                
             </div>
-        
             
         </div>
         
