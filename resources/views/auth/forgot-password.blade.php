@@ -1,12 +1,5 @@
 <x-guest-layout>
-    <x-jet-authentication-card>
-        <!-- <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot> -->
-        <div class="flex items-center justify-center mt-4">    
-            <a href="{{ url('/') }}" class="text-md text-blue-700 underline">MeineTerminübersicht</a>
-        </div>
-        
+    <x-jet-authentication-card>     
         
         <div class="mb-4 text-sm text-gray-600">
             {{ __('Du hast dein Passwort vergessen? Gib deine E-Mail ein und wir senden dir einen Link zum Zurücksetzen.') }}
@@ -24,18 +17,22 @@
             @csrf
 
             <div class="block">
-                <x-jet-label for="email" value="{{ __('E-Mail') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                
+                <label class="" for="email" value="{{ __('E-Mail') }}">E-Mail</label>
+                <input id="email" class="form-control" type="email" name="email" :value="old('email')" placeholder="example@mail.de" required autofocus></input>
             </div>
-
             
-            <div class="flex items-center justify-start mt-4">    
-                <button><a href="{{ url('/') }}" class="text-sm text-gray-700 ">Zurück zur Startseite</a></button>
-            </div>
-            <div class="flex items-center justify-end mt-4">    
-                <x-jet-button>
-                    {{ __('Link anfordern') }}
-                </x-jet-button>
+            <div class="container mt-4">
+                <div class="row justify-content-end">
+                    <div class="col-4 align-self-center">  
+                        <button class="btn btn-secondary">{{ __('Link anfordern') }}</button>
+                    </div>
+                    <div class="col-5 align-self-center">   
+                        <a  href="{{ url('/') }}" class="btn btn-outline-secondary">
+                            Zurück zur Startseite
+                        </a>
+                    </div>
+                </div>
             </div>
         </form>
     </x-jet-authentication-card>

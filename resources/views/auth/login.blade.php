@@ -1,6 +1,5 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-    
         <x-jet-validation-errors class="mb-4" />
         
         @if (session('status'))
@@ -22,23 +21,28 @@
                 <input id="password" class="form-control" type="password" name="password" placeholder="passwort" required autocomplete="current-password" />
             </div>
 
-            <div class="form-group text-center">
-                <label for="remember_me" class="flex items-center">
+            <div class="form-group text-start">
+                <label for="remember_me">
                     <input id="remember_me" type="checkbox" class="form-checkbox" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Eingeloggt bleiben') }}</span>
+                    <span class="ml-2">{{ __('Eingeloggt bleiben') }}</span>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Passwort vergessen?') }}
-                    </a>
-                @endif
-
-                <x-jet-button class="ml-4">
-                    {{ __('Login') }}
-                </x-jet-button>
+            <div class="container mt-4">
+                <div class="row justify-content-end">
+                    <div class="col-5 align-self-center">
+                    @if (Route::has('password.request'))
+                        <a class="text-info hover:text-dark" href="{{ route('password.request') }}">
+                            {{ __('Passwort vergessen?') }}
+                        </a>
+                    @endif
+                    </div>
+                    <div class="col-2 align-self-center">
+                    <button class="btn btn-secondary">
+                        {{ __('Login') }}
+                    </button>
+                    </div>
+                </div>
             </div>
         </form>
     </x-jet-authentication-card>

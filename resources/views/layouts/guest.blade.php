@@ -13,7 +13,7 @@
     </head>
     <body class="bg-dark">
         <div class="container-fluid">
-            <div class="row justify-content-center" style="height: 300px; padding-top: 150px">
+            <div class="row justify-content-center" style="height: 250px; padding-top: 150px">
                 <h1><a href="{{ url('/') }}" class="text-light">MeinTerminplaner</a></h1>
             </div>    
             <div class="row justify-content-center">
