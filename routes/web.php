@@ -19,6 +19,9 @@ Route::resource('events', EventController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('logout', function () {
+    return view('login');
+});
 /* Route::get('dashboard', function () {
     return redirect('events');
 }); */
