@@ -24,7 +24,6 @@
             <div class="col-6">
                 <form action="{{ route('events.store') }}" method="POST">
                     @csrf
-                        
                             <div class="form-group">
                                 <strong>Name:</strong>
                                 <input type="text" name="name" class="form-control" placeholder="Name">
