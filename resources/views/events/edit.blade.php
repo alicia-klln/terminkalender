@@ -35,12 +35,14 @@
                         <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $event->detail }}</textarea>
                     </div>
                     <div class="form-group">
-                        <strong>Datum</strong>
-                        <input type="date" name="date" value="{{ $event->date }}" class="form-control">
+                        <strong>Start- & Enddatum</strong>
+                        <input type="date" name="datestart" value="{{ $event->datestart }}" class="form-control">
+                        <input type="date" name="dateend" value="{{ $event->dateend }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <strong>Zeit</strong>
-                        <input type="time" name="time" value="{{ $event->time }}" class="form-control">
+                        <strong>Start- & Endzeit</strong>
+                        <input type="time" name="timestart" value="{{ $event->timestart }}" class="form-control">
+                        <input type="time" name="timeend" value="{{ $event->timeend }}" class="form-control">
                     </div>                    
                     <div class="col-6 text-center">
                         <button type="submit" class="btn-lg btn-dark ">Termin speichern</button>

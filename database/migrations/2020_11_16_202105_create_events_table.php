@@ -18,8 +18,10 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->text('detail');
             $table->string('user_name');
-            $table->date('date');
-            $table->time('time');
+            $table->date('datestart');
+            $table->date('dateend');
+            $table->time('timestart');
+            $table->time('timeend');
             $table->timestamps();
         });
         

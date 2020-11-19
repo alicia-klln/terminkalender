@@ -43,12 +43,14 @@
                                 
                             </div>
                             <div class="form-group">
-                                <strong>Datum</strong>
-                                <input type="date" name="date" class="form-control">
+                                <strong>Start- & Enddate</strong>
+                                <input type="date" name="datestart" class="form-control">
+                                <input type="date" name="dateend" class="form-control">
                             </div>
                             <div class="form-group">
-                                <strong>Zeit</strong>
-                                <input type="time" name="time" class="form-control">
+                                <strong>Start- & Endzeit</strong>
+                                <input type="time" name="timestart" class="form-control">
+                                <input type="time" name="timeend" class="form-control">
                             </div>
 
                         <div class="col-6 text-center">

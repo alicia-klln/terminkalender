@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-8 table-responsive">
-                <table class="table">
+                <table class="table border">
                     <thead class="thead-dark">
                         <tr>
                             <!--<th scope="col">Event-ID</th> -->
@@ -24,7 +24,6 @@
                             <th scope="col">Details</th>
                             <th scope="col">Datum</th>
                             <th scope="col">Uhrzeit</th>
-                            
                             <th scope="col" width="280px">Action</th>
                         </tr>
                     </thead>
@@ -36,9 +35,8 @@
                             <!--<td style="width: 100px">{{ $event->id }}</td> -->
                             <td style="width: 150px">{{ $event->name }}</td>
                             <td style="width: 300px">{{ $event->detail }}</td>
-                            <td>{{ $event->date}}</td>
-                            <td>{{ $event->time }} Uhr</td>
-                            
+                            <td>{{ $event->datestart }} - {{ $event->dateend }}</td>
+                            <td>{{ $event->timestart }} Uhr - {{ $event->timeend }} Uhr</td>
                             <td class="text-center">
 
                                 <a class="btn btn-outline-dark" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</a>

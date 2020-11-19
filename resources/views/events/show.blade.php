@@ -19,13 +19,15 @@
                         <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail" disabled>{{ $event->detail }}</textarea>
                     </div>
                     <div class="form-group">
-                        <strong>Datum</strong>
-                        <input type="date" name="date" value="{{ $event->date }}" class="form-control" disabled>
+                        <strong>Start- & Enddatum:</strong>
+                        <input type="date" name="datestart" value="{{ $event->datestart }}" class="form-control" disabled>
+                        <input type="date" name="dateend" value="{{ $event->dateend }}" class="form-control" disabled>
                     </div>
                     <div class="form-group">
-                        <strong>Zeit</strong>
-                        <input type="time" name="time" value="{{ $event->time }}" class="form-control" disabled>
-                    </div>                    
+                        <strong>Start- & Endzeit</strong>
+                        <input type="time" name="timestart" value="{{ $event->timestart }}" class="form-control" disabled>
+                        <input type="time" name="timeend" value="{{ $event->timeend }}" class="form-control" disabled>
+                    </div>                      
                 </div>
             </div>
         </div>
