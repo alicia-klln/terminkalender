@@ -44,6 +44,8 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+            'date' => 'required',
+            'time' => 'required',
         ]);
     
         Event::create($request->all());

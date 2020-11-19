@@ -19,42 +19,42 @@
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">Event-ID</th>
+                            <!--<th scope="col">Event-ID</th> -->
                             <th scope="col">Name</th>
-                            <th scope="col">Ersteller</th>
                             <th scope="col">Details</th>
+                            <th scope="col">Datum</th>
+                            <th scope="col">Uhrzeit</th>
                             
                             <th scope="col" width="280px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        
-                        @foreach ($events as $event)
-                            
-                        <tr>
-                            <td style="width: 100px">{{ $event->id }}</td>
-                            <td style="width: 150px">{{ $event->name }}</td>
-                            <td style="width: 100px">{{ $event->creater }}</td>
 
-                            <td style="width: 600px">{{ $event->detail }}</td>
+                        @foreach ($events as $event)
+                        @if (Auth::user()->name == $event->user_name)
+                        <tr>
+                            <!--<td style="width: 100px">{{ $event->id }}</td> -->
+                            <td style="width: 150px">{{ $event->name }}</td>
+                            <td style="width: 400px">{{ $event->detail }}</td>
+                            <td>{{ $event->date}}</td>
+                            <td>{{ $event->time }} Uhr</td>
+                            
                             <td class="text-center">
 
                                 <a class="btn btn-info" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</a>
                                 <a class="btn btn-secondary" href="{{ route('events.edit',$event->id) }}" style="margin: 2px">Bearbeiten</a>
                                 
                                 <form action="{{ route('events.destroy',$event->id) }}" method="POST">
+
+                                @csrf
+                                @method('DELETE')
                 
-                                    
-                
-                                    @csrf
-                                    @method('DELETE')
-                    
-                                    <button type="submit" class="btn btn-danger" style="margin: 2px">Löschen</button>
+                                <button type="submit" class="btn btn-danger" style="margin: 2px">Löschen</button>
                                 </form>
                             </td>
                         </tr>
                             
-                            
+                        @endif
                         @endforeach
                     </tbody>
                 </table>
