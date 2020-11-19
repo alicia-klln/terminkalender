@@ -15,7 +15,7 @@
     @endif
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-10 table-responsive">
+            <div class="col-8 table-responsive">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -35,21 +35,21 @@
                         <tr>
                             <!--<td style="width: 100px">{{ $event->id }}</td> -->
                             <td style="width: 150px">{{ $event->name }}</td>
-                            <td style="width: 400px">{{ $event->detail }}</td>
+                            <td style="width: 300px">{{ $event->detail }}</td>
                             <td>{{ $event->date}}</td>
                             <td>{{ $event->time }} Uhr</td>
                             
                             <td class="text-center">
 
-                                <a class="btn btn-info" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</a>
-                                <a class="btn btn-secondary" href="{{ route('events.edit',$event->id) }}" style="margin: 2px">Bearbeiten</a>
+                                <a class="btn btn-outline-dark" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</a>
+                                <a class="btn btn-outline-dark" href="{{ route('events.edit',$event->id) }}" style="margin: 2px">Bearbeiten</a>
                                 
                                 <form action="{{ route('events.destroy',$event->id) }}" method="POST">
 
                                 @csrf
                                 @method('DELETE')
                 
-                                <button type="submit" class="btn btn-danger" style="margin: 2px">Löschen</button>
+                                <button type="submit" class="btn btn-outline-dark" style="margin: 2px">Löschen</button>
                                 </form>
                             </td>
                         </tr>
@@ -58,7 +58,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <a class="btn btn-secondary btn-lg" href="{{ route('events.create') }}">Neuer Termin</a>
+                <a class="btn btn-dark btn-lg" href="{{ route('events.create') }}">Neuer Termin</a>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-6 py-3">
                 <form action="{{ route('events.store') }}" method="POST">
                     @csrf
                             <div class="form-group">

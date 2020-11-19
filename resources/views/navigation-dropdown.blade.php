@@ -15,12 +15,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard') }}">Übersicht</a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('events.index') }}">Deine Termine</a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('events.create') }}">Neuer Termin</a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile.show') }}">Profil</a>
             </li>   
@@ -36,7 +39,7 @@
                     <button class="btn btn-outline-light my-2 my-sm-0" style="font-size: 1.2em;"
                         href="{{ route('logout') }}"
                             onclick="event.preventDefault();
-                                    this.closest('form').submit();">
+                                this.closest('form').submit();">
                             {{ __('Logout') }}
                     </button>
                 </form>

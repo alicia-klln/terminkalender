@@ -22,7 +22,7 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-6 py-3">
                 <form action="{{ route('events.update',$event->id) }}" method="POST">
                     @csrf
                     @method('PUT')
@@ -34,10 +34,17 @@
                         <strong>Detail:</strong>
                         <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $event->detail }}</textarea>
                     </div>
-                    
+                    <div class="form-group">
+                        <strong>Datum</strong>
+                        <input type="date" name="date" value="{{ $event->date }}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <strong>Zeit</strong>
+                        <input type="time" name="time" value="{{ $event->time }}" class="form-control">
+                    </div>                    
                     <div class="col-6 text-center">
                         <button type="submit" class="btn-lg btn-dark ">Termin speichern</button>
-                        <button class="btn-lg btn-outline-secondary" href="{{ route('events.index') }}"> Verwerfen</button>
+                        <a class="btn-lg btn-secondary" href="{{ route('events.index') }}"> Verwerfen</a>
                     </div>      
                 </form>
             </div>
