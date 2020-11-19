@@ -27,7 +27,7 @@
             <div class="container mt-4">
                 <div class="row justify-content-end">
                     <div class="col-5 align-self-center">
-                        <a class="text-info hover:text-dark" href="{{ route('password.request') }}">
+                        <a class="text-info hover:text-dark" href="{{ route('login') }}">
                             {{ __('Bereits registriert?') }}
                         </a>
                     </div>

@@ -36,7 +36,10 @@
                     </div>
                     <div class="form-group">
                         <strong>Ersteller:</strong>
-                        <input type="text" name="creater" class="form-control" placeholder="{{Auth::user()->name}}" disabled>
+                        <div class="form-check">
+                            <input type="radio" id="radio1" name="creater" class="form-check-input bg-dark" value="{{ Auth::user()->name}}" checked>
+                            <label class="form-check-label" for="radio1">{{ Auth::user()->name}}</label> 
+                        </div>
                     </div>
                     <div class="col-6 text-center">
                         <button type="submit" class="btn-lg btn-dark ">Termin speichern</button>

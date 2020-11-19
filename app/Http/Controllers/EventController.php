@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -12,11 +13,13 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function index(Event $event)
     {
+        $users = User::all();
         $events = Event::oldest()->paginate(5);
     
-        return view('events.index',compact('events'))
+        return view('events.index',compact('events', 'users'), ["event" => $event])
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -46,7 +49,7 @@ class EventController extends Controller
         Event::create($request->all());
      
         return redirect()->route('events.index')
-                        ->with('success','Event created successfully.');
+                        ->with('success','Dein Termin wurde erstellt.');
     }
 
     /**
@@ -89,7 +92,7 @@ class EventController extends Controller
         $event->update($request->all());
     
         return redirect()->route('events.index')
-                        ->with('success','Event updated successfully');
+                        ->with('success','Dein Termin wurde aktualisiert.');
     }
 
     /**
@@ -103,6 +106,6 @@ class EventController extends Controller
         $event->delete();
     
         return redirect()->route('events.index')
-                        ->with('success','Event deleted successfully');
+                        ->with('success','Dein Termin wurde gelöscht.');
     }
 }

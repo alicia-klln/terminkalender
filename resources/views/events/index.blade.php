@@ -15,7 +15,7 @@
     @endif
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-8 table-responsive">
+            <div class="col-10 table-responsive">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -23,24 +23,28 @@
                             <th scope="col">Name</th>
                             <th scope="col">Ersteller</th>
                             <th scope="col">Details</th>
+                            
                             <th scope="col" width="280px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        
                         @foreach ($events as $event)
-                            @if ($users()->name == $creater)
+                            
                         <tr>
                             <td style="width: 100px">{{ $event->id }}</td>
                             <td style="width: 150px">{{ $event->name }}</td>
                             <td style="width: 100px">{{ $event->creater }}</td>
-                            
+
                             <td style="width: 600px">{{ $event->detail }}</td>
                             <td class="text-center">
+
+                                <a class="btn btn-info" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</a>
+                                <a class="btn btn-secondary" href="{{ route('events.edit',$event->id) }}" style="margin: 2px">Bearbeiten</a>
+                                
                                 <form action="{{ route('events.destroy',$event->id) }}" method="POST">
                 
-                                    <button class="btn btn-info" href="{{ route('events.show',$event->id) }}" style=" margin: 2px">Ansehen</button>
-                    
-                                    <button class="btn btn-secondary" href="{{ route('events.edit',$event->id) }}" style="margin: 2px">Bearbeiten</button>
+                                    
                 
                                     @csrf
                                     @method('DELETE')
@@ -49,11 +53,12 @@
                                 </form>
                             </td>
                         </tr>
-                            @endif
+                            
+                            
                         @endforeach
                     </tbody>
                 </table>
-                <button class="btn btn-secondary btn-lg" href="{{ route('events.create') }}">Neuer Termin</button>
+                <a class="btn btn-secondary btn-lg" href="{{ route('events.create') }}">Neuer Termin</a>
             </div>
         </div>
     </div>
