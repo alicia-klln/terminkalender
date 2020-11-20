@@ -12,8 +12,4 @@ class Event extends Model
     protected $fillable = [
         'name', 'detail', 'user_name', 'datestart', 'dateend', 'timestart', 'timeend'
     ];
-    public function myevent()
-    {
-        return $this->hasMany('App\Model\Event', 'id', 'id');
-    }
 }

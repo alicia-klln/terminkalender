@@ -18,7 +18,6 @@ class EventController extends Controller
     {
         $users = User::all();
         $events = Event::oldest()->paginate(5);
-    
         return view('events.index',compact('events', 'users'), ["event" => $event])
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -110,6 +109,6 @@ class EventController extends Controller
         $event->delete();
     
         return redirect()->route('events.index')
-                        ->with('success','Dein Termin wurde gelöscht.');
+                        ->with('failed','Dein Termin wurde gelöscht.');
     }
 }

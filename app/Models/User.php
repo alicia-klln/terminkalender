@@ -24,10 +24,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-    public function index()
-    {
-        return Event::find(1)->myevent;
-    }
 
     protected $fillable = [
         'name',

@@ -1,5 +1,3 @@
-
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="">
@@ -17,17 +15,17 @@
         <div class="row justify-content-center mt-4">
             <div class="col-3">
                 <div class="card bg-dark text-white" style="height: 200px">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Terminübersicht</h4> 
-                            <p class="card-text" style="height: 50px">Hier siehst du eine Übersicht aller Termine.</p>
-                            <a href="{{ route('events.index') }}" class="btn btn-outline-light">Zu deinen Terminen</a>
-                        </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Terminübersicht</h4> 
+                        <p class="card-text" style="height: 50px">Hier siehst du eine Übersicht aller Termine.</p>
+                        <a href="{{ route('events.index') }}" class="btn btn-outline-light">Zu deinen Terminen</a>
                     </div>
                 </div>
+            </div>
             <div class="col-3">
                 <div class="card bg-dark text-white" style="height: 200px">
                     <div class="card-body text-center">
-                    <h4 class="card-title">Neuer Termin</h4> 
+                        <h4 class="card-title">Neuer Termin</h4> 
                         <p class="card-text" style="height: 50px">Erstelle direkt einen neuen Termin.</p>
                         <a href="{{ route('events.create') }}" class="btn btn-outline-light">Neuen Termin erstellen</a>
                     </div>

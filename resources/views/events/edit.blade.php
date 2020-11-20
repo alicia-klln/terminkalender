@@ -1,4 +1,3 @@
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -27,11 +26,11 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <strong>Name:</strong>
+                        <strong>Name</strong>
                         <input type="text" name="name" value="{{ $event->name }}" class="form-control" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <strong>Detail:</strong>
+                        <strong>Detail</strong>
                         <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $event->detail }}</textarea>
                     </div>
                     <div class="form-group">
@@ -51,7 +50,6 @@
                 </form>
             </div>
         </div>
-        
     </div>
 </x-app-layout>
 @endsection

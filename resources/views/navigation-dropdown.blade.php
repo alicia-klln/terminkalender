@@ -1,7 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{{ route('dashboard') }}" style="font-size: 1.8em;">Mein<strong>Terminplaner</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,21 +6,14 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" style="font-size: 1.2em;">
-
         @if (Route::has('login'))
             @auth
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard') }}">Übersicht</a>
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('events.index') }}">Deine Termine</a>
             </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('events.create') }}">Neuer Termin</a>
-            </li>
-            
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile.show') }}">Profil</a>
             </li>   
